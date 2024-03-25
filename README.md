@@ -4,4 +4,7 @@ For this project, I used the provided program 1 code along with the provided tab
 
 To run:
 main python.py
-:
+
+For test suite:
+python -m coverage run TestSuite.py
+python -m coverage report
