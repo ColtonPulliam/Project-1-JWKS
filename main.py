@@ -11,11 +11,11 @@ import time
 
 hostName = "localhost"
 serverPort = 8080
-
+#creates the sqlite database file
 conn = sqlite3.connect('totally_not_my_privateKeys.db')
-
+#creates database cursor
 c = conn.cursor()
-
+#implements schema into the database file
 c.execute("""
 CREATE TABLE IF NOT EXISTS keys(
     kid INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -46,14 +46,14 @@ expired_pem = expired_key.private_bytes(
 )
 
 numbers = private_key.private_numbers()
-
+#expiration times for the database keys
 exp_now = int(time.time())
 exp_later = int(time.time())+ (1 * 60 * 60)
-
+#inserts the expired and unexpired key into the database
 c.execute("INSERT INTO keys (key, exp) VALUES (?,?)", (expired_pem,exp_now))
 c.execute("INSERT INTO keys (key, exp) VALUES (?,?)", (pem,exp_later))
 
-
+#commits the changes to the database
 conn.commit()
 def int_to_base64(value):
     """Convert an integer to a Base64URL-encoded string"""
