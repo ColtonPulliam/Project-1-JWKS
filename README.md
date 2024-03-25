@@ -1,3 +1,7 @@
 # Project-2-Extending JWKS
 
-I used python, which is an easy to read language, but because UNT primarily teaches C/C++, I have never used it before. The intial code for my project came from just reading one step of the project at a time, reading or watching a tutorial about this step, implementing it into my code, and combining it. Eventually when I began testing with Gradebot, I had to alter my code pretty significantly with the help recieved in the recitiation.
+For this project, I used the provided program 1 code along with the provided table schema and create an sqlite database that gradebot can use to test the program. I watched this video: https://www.youtube.com/watch?v=byHcYRpMgI4&t=1173s to implement the database. Read code comments for specifc details
+
+To run:
+main python.py
+:
