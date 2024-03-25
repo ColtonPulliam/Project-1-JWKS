@@ -8,3 +8,5 @@ main python.py
 For test suite:
 python -m coverage run TestSuite.py
 python -m coverage report
+
+It is worth noting that because of the size of the code plus it not being my own originally, I could not get overall coverage over 62%
